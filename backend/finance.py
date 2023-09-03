@@ -33,7 +33,9 @@ def generate_stock(ticker):
     historical = []
     for index, row in stock.iterrows():
         historical.append({"date":str(index),"open":row["Open"],"high":row["High"],"low":row["Low"],"close":row["Close"],"volume":row["Volume"]})
-    return historical
+        # sort by date
+    
+    return historical[::-1]
 
     
     
